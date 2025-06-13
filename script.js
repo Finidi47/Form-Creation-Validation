@@ -11,8 +11,18 @@ document.addEventListener("DOMContentLoaded", () => { // Wait for the DOM to loa
         event.preventDefault(); // stop the form from reloading the page
     })
 
-    // Testing: log input values to verify functionality
-    console.log('username:', usernameInput.value);
-    console.log('email:', emailInput.value);
-    console.log('password:', passwordInput.value);
+    //     Testing: log input values to verify functionality
+    // console.log('username:', usernameInput.value);
+    // console.log('email:', emailInput.value);
+    // console.log('password:', passwordInput.value);
+
+    const username = usernameInput.Value.trim();
+    const email = emailInput.Value.trim();
+    const password = passwordInput.Value.trim();
+
+        // Testing: very if the values are clean
+    // console.log('Trimmed username:', username);
+    // console.log('Trimmed email:', email);
+    // console.log('Trimmed password:', password);
+    
 });
