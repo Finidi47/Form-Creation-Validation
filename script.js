@@ -16,13 +16,14 @@ document.addEventListener("DOMContentLoaded", () => { // Wait for the DOM to loa
     // console.log('email:', emailInput.value);
     // console.log('password:', passwordInput.value);
 
-    const username = usernameInput.Value.trim();
-    const email = emailInput.Value.trim();
-    const password = passwordInput.Value.trim();
+    const username = usernameInput.value.trim();
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
 
         // Testing: very if the values are clean
     // console.log('Trimmed username:', username);
     // console.log('Trimmed email:', email);
     // console.log('Trimmed password:', password);
-    
+
 });
