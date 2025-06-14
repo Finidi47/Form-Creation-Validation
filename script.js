@@ -48,6 +48,17 @@ document.addEventListener("DOMContentLoaded", () => { // Wait for the DOM to loa
 
     console.log(messages);
 
+    //showing the feedback div
+    feedbackDiv.style.display = 'block';
+    if(isValid){    //Alternative: if (messages.length === 0)
+        feedbackDiv.textContent = 'Registration successful!';
+        feedbackDiv.style.color = '#28a745';
+    } else{
+        feedbackDiv.innerHTML = messages.join('<br>');
+        feedbackDiv.style.color = "#dc3545";
+    }
+
+
 }) //end of submit listener
 
 });
