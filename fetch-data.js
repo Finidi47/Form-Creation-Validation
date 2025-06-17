@@ -11,13 +11,35 @@ async function fetchUserData() {
         const response = await fetch(apiUrl);
         //convert response to json and store it in users
         const users = await response.json();
-        console.log(users);
-        console.log(response);
+
+        // Clear the loading message
+        dataContainer.innerHTML = '';
+
+        // Create a <ul> element
+        const userList = document.createElement('ul')
+
+        // Loop through the users array
+        users.forEach(user => {
+            // Create a <li> element
+            const listItem = document.createElement('li')
+
+            // Set the text content of the <li> to the user's name
+            listItem.textContent = user.name;
+
+            // Append the <li> to the <ul>
+            userList.appendChild(listItem);
+        });
+
+        // Append the <ul> to the dataContainer
+        dataContainer.appendChild(userList);
+
     } catch (error) {
-        console.log('Failed to load user data.');
+        dataContainer.innerHTML = '';
+        dataContainer.textContent = 'Failed to load user data.';
+        console.log('Unable to load data right now.');
     }
-    //clear content in the data container
-    dataContainer.innerHTML = '';
+    
+
 
 }
 
